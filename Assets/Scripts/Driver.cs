@@ -15,4 +15,13 @@ public class Driver : MonoBehaviour
         transform.Rotate(0, 0, -steerAmount);
         transform.Translate(0, moveAmount, 0);
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("キャー");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("Pass!");
+    }
 }
